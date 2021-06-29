@@ -7,6 +7,7 @@ import SiderMenu from "../components/SiderMenu";
 import { CopyrightOutlined } from '@ant-design/icons'
 import Home from '../pages/home'
 import Btn from '../pages/btn'
+import BizChart from '../pages/Chat/bizcharts'
 import './index.scss'
 
 const { Header, Content, Footer } = Layout;
@@ -66,6 +67,7 @@ class BasicLayout extends React.Component {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/btn" exact component={Btn} />
+              <Route path="/chat" exact component={BizChart} />
               <Redirect to="/" />
             </Switch>
           </Content>
