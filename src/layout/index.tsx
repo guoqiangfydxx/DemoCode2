@@ -4,11 +4,12 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import GlobalHeader from "../components/GlobalHeader";
 import GlobalFooter from "../components/GlobalFooter";
 import SiderMenu from "../components/SiderMenu";
-import { CopyrightOutlined } from '@ant-design/icons'
-import Home from '../pages/home'
-import Btn from '../pages/btn'
-import BizChart from '../pages/Chat/bizcharts'
-import './index.scss'
+import { CopyrightOutlined } from "@ant-design/icons";
+import Home from "../pages/home";
+import Btn from "../pages/btn";
+import BizChart from "../pages/Chat/bizcharts";
+import Demo1 from "../pages/Form/demo1";
+import "./index.scss";
 
 const { Header, Content, Footer } = Layout;
 
@@ -23,9 +24,7 @@ class BasicLayout extends React.Component {
     isMobile: false,
   };
 
-  componentDidMount() {
-    
-  }
+  componentDidMount() {}
 
   handleMenuCollapse = (collapsed: any) => {
     this.setState({
@@ -39,7 +38,7 @@ class BasicLayout extends React.Component {
     const { currentUser, isMobile: mb, collapsed } = this.state;
 
     const layout = (
-      <Layout id="components-layout-demo-customr" className='project-container'>
+      <Layout id="components-layout-demo-customr" className="project-container">
         <SiderMenu
           logo={null}
           collapsed={collapsed}
@@ -68,6 +67,7 @@ class BasicLayout extends React.Component {
               <Route path="/" exact component={Home} />
               <Route path="/btn" exact component={Btn} />
               <Route path="/chat" exact component={BizChart} />
+              <Route path="/form1" exact component={Demo1} />
               <Redirect to="/" />
             </Switch>
           </Content>
@@ -85,9 +85,7 @@ class BasicLayout extends React.Component {
       </Layout>
     );
 
-    return (
-        layout
-    );
+    return layout;
   }
 }
 

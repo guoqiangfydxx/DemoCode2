@@ -87,7 +87,20 @@ export default class SiderMenu extends PureComponent {
             <Menu.Item key="3">
               <Link to="/chat">图标</Link>
             </Menu.Item>
-          </SubMenu>'
+          </SubMenu>
+          <SubMenu
+            key="sub4"
+            title={
+              <span>
+                <span>表单</span>
+              </span>
+            }
+          >
+            <Menu.Item key="4">
+              <Link to="/form1">普通表单</Link>
+            </Menu.Item>
+          </SubMenu>
+          '
         </Menu>
       </Sider>
     );
