@@ -99,8 +99,19 @@ export default class SiderMenu extends PureComponent {
             <Menu.Item key="4">
               <Link to="/form1">普通表单</Link>
             </Menu.Item>
+            <Menu.Item key="5">
+              <Link to="/formList">FormList</Link>
+            </Menu.Item>
+            <Menu.Item key="6">
+              <Link to="/classForm">classForm</Link>
+            </Menu.Item>
+            <Menu.Item key="7">
+              <Link to="/requireMark">requireMark</Link>
+            </Menu.Item>
+            <Menu.Item key="8">
+              <Link to="/nestedMessage">nestedMessage</Link>
+            </Menu.Item>
           </SubMenu>
-          '
         </Menu>
       </Sider>
     );
