@@ -81,8 +81,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "eslint {**/*,**}.{jsx,js,ts,tsx}",
-    "lint_fix": "eslint --fix {**/*,**}.{jsx,js,ts,tsx}"
+    "lint": "eslint **/*.{jsx,js} --no-error-on-unmatched-pattern",
+    "lint_fix": "eslint --fix {**/*,**}.{jsx,js,ts,tsx} --no-error-on-unmatched-pattern"
   },
   "eslintConfig": {
     "extends": [
@@ -166,6 +166,7 @@
     "@typescript-eslint/parser": "^4.28.1",
     "eslint": "^7.30.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-webpack": "^0.13.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
