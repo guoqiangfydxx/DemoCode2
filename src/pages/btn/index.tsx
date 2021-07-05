@@ -1,17 +1,23 @@
-import React, { Fragment, useCallback, useState } from 'react'
-import { Button } from 'antd'
+import React, { Fragment, useCallback, useState } from 'react';
+import { Button } from 'antd';
+
 function TestBtn() {
-    const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-    const handleClick = useCallback(() => {
-        setCount(count => count + 1)
-    }, [])
+  const handleClick = useCallback(() => {
+    setCount((c) => c + 1);
+  }, []);
 
-    return (
-        <Fragment>
-            <Button onClick={handleClick}>Click me</Button>
-            <p>you have clicked {count} times</p>
-        </Fragment>
-    )
+  return (
+    <>
+      <Button onClick={handleClick}>Click me</Button>
+      <p>
+        you have clicked
+        {count}
+        {' '}
+        times
+      </p>
+    </>
+  );
 }
-export default TestBtn
+export default TestBtn;
