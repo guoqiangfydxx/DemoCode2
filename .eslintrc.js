@@ -31,6 +31,8 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/state-in-constructor': 'off',
+    'no-shadow': 'off',
+    'no-template-curly-in-string': 'off',
   },
   settings: {
     webpack: {

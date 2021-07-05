@@ -8,6 +8,11 @@ import SiderMenu from '../components/SiderMenu';
 import Home from '../pages/home';
 import Btn from '../pages/btn';
 import BizChart from '../pages/Chat/bizcharts';
+import Demo1 from '../pages/Form/demo1';
+import FormList from '../pages/Form/formList';
+import ClassForm from '../pages/Form/classForm';
+import RequireMark from '../pages/Form/requireMark';
+import NestedMessage from '../pages/Form/nestedMessage';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -23,9 +28,7 @@ class BasicLayout extends React.Component {
     isMobile: false,
   };
 
-  componentDidMount() {
-
-  }
+  componentDidMount() {}
 
   handleMenuCollapse = (collapsed: any) => {
     this.setState({
@@ -68,6 +71,11 @@ class BasicLayout extends React.Component {
               <Route path="/" exact component={Home} />
               <Route path="/btn" exact component={Btn} />
               <Route path="/chat" exact component={BizChart} />
+              <Route path="/form1" exact component={Demo1} />
+              <Route path="/formList" exact component={FormList} />
+              <Route path="/classForm" exact component={ClassForm} />
+              <Route path="/requireMark" exact component={RequireMark} />
+              <Route path="/nestedMessage" exact component={NestedMessage} />
               <Redirect to="/" />
             </Switch>
           </Content>
@@ -87,9 +95,7 @@ class BasicLayout extends React.Component {
       </Layout>
     );
 
-    return (
-      layout
-    );
+    return layout;
   }
 }
 
