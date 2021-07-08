@@ -3,6 +3,7 @@ import { Form, Input, Checkbox, Button } from "antd";
 // 如果component设置为false的话，那么最外层的form节点就会消失，只有里面的formItem会展示在界面中
 // htmlType的button点击也是在onFieldsChange里面的，但是其不会触发valuesChange，所以相对来说valuesChange监听表单域的改变是更加可靠的
 // 原本的每一个FormItem都是用col包裹起真正的input或者select的，但是现在当设置noStyle之后就只会纯展示里面的input或者Select，外层的包裹样式都被去除掉了
+// modal弹框中有表单的话，最简易的处理方式就是在表单验证之后将表单值传递给父组件对应的函数，而不是在表单内部直接来解决这个问题；但是如果整个弹框在很多地方都使用到的话，反而将其处理数据放在内部是更加合理的
 const validateMessages = {
   required: "${label} is required!",
   types: {

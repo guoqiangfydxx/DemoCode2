@@ -111,6 +111,9 @@ export default class SiderMenu extends PureComponent {
             <Menu.Item key="8">
               <Link to="/nestedMessage">nestedMessage</Link>
             </Menu.Item>
+            <Menu.Item key="9">
+              <Link to="/form-provider">FormProvider</Link>
+            </Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>

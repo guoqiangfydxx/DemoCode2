@@ -13,6 +13,7 @@ import FormList from "../pages/Form/formList";
 import ClassForm from "../pages/Form/classForm";
 import RequireMark from "../pages/Form/requireMark";
 import NestedMessage from "../pages/Form/nestedMessage";
+import FormProvider from "../pages/Form/FormProvider";
 import "./index.scss";
 
 const { Header, Content, Footer } = Layout;
@@ -76,6 +77,7 @@ class BasicLayout extends React.Component {
               <Route path="/classForm" exact component={ClassForm} />
               <Route path="/requireMark" exact component={RequireMark} />
               <Route path="/nestedMessage" exact component={NestedMessage} />
+              <Route path="/form-provider" exact component={FormProvider} />
               <Redirect to="/" />
             </Switch>
           </Content>
