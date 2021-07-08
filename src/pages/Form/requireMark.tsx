@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import { Form, Input, Button, Radio } from "antd";
-import { InfoCircleOutlined } from "@ant-design/icons";
+import React, { useState } from 'react';
+import {
+  Form, Input, Button, Radio,
+} from 'antd';
+import { InfoCircleOutlined } from '@ant-design/icons';
 
-type RequiredMark = boolean | "optional";
+type RequiredMark = boolean | 'optional';
 const FormLayoutDemo = () => {
   const [form] = Form.useForm();
-  const [requiredMark, setRequiredMarkType] =
-    useState<RequiredMark>("optional");
+  const [requiredMark, setRequiredMarkType] = useState<RequiredMark>('optional');
 
   const onRequiredTypeChange = ({
     requiredMarkValue,
@@ -40,7 +41,7 @@ const FormLayoutDemo = () => {
       <Form.Item
         label="Field B"
         tooltip={{
-          title: "Tooltip with customize icon",
+          title: 'Tooltip with customize icon',
           icon: <InfoCircleOutlined />,
         }}
       >

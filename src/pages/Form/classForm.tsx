@@ -1,6 +1,8 @@
-import React from "react";
-import { Form, Input, Button, Select } from "antd";
-import { FormInstance } from "antd/lib/form";
+import React from 'react';
+import {
+  Form, Input, Button, Select,
+} from 'antd';
+import { FormInstance } from 'antd/lib/form';
 // antd4的form在class组件中不再挂载到this.props上面了，目前的方法都是直接通过ref来获取对应的表单实例
 const { Option } = Select;
 
@@ -12,14 +14,14 @@ const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
 
-function fixed(name: string | null): string {
-  // !操作符是一个类型断言操作符，就是告诉编辑器当前的变量不可能是null或者undefined，放心的执行后续的代码
-  function postfix(epithet: string) {
-    return name!.charAt(0) + ".  the " + epithet; // ok
-  }
-  name = name || "Bob";
-  return postfix("great");
-}
+// function fixed(name: string | null): string {
+//   // !操作符是一个类型断言操作符，就是告诉编辑器当前的变量不可能是null或者undefined，放心的执行后续的代码
+//   function postfix(epithet: string) {
+//     return `${name!.charAt(0)}.  the ${epithet}`; // ok
+//   }
+//   name = name || 'Bob';
+//   return postfix('great');
+// }
 
 class Demo extends React.Component {
   formRef = React.createRef<FormInstance>();
@@ -27,16 +29,19 @@ class Demo extends React.Component {
   name = null;
 
   onGenderChange = (value: string) => {
-    console.log("props>>>", this.props);
+    console.log('props>>>', this.props);
     switch (value) {
-      case "male":
-        this.formRef.current!.setFieldsValue({ note: "Hi, man!" });
+      case 'male':
+        this.formRef.current!.setFieldsValue({ note: 'Hi, man!' });
         return;
-      case "female":
-        this.formRef.current!.setFieldsValue({ note: "Hi, lady!" });
+      case 'female':
+        this.formRef.current!.setFieldsValue({ note: 'Hi, lady!' });
         return;
-      case "other":
-        this.formRef.current!.setFieldsValue({ note: "Hi there!" });
+      case 'other':
+        this.formRef.current!.setFieldsValue({ note: 'Hi there!' });
+        break;
+      default:
+        break;
     }
   };
 
@@ -50,8 +55,8 @@ class Demo extends React.Component {
 
   onFill = () => {
     this.formRef.current!.setFieldsValue({
-      note: "Hello world!",
-      gender: "male",
+      note: 'Hello world!',
+      gender: 'male',
     });
   };
 
@@ -83,21 +88,17 @@ class Demo extends React.Component {
         </Form.Item>
         <Form.Item
           noStyle
-          shouldUpdate={(prevValues, currentValues) =>
-            prevValues.gender !== currentValues.gender
-          }
+          shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
         >
-          {({ getFieldValue }) =>
-            getFieldValue("gender") === "other" ? (
-              <Form.Item
-                name="customizeGender"
-                label="Customize Gender"
-                rules={[{ required: true }]}
-              >
-                <Input />
-              </Form.Item>
-            ) : null
-          }
+          {({ getFieldValue }) => (getFieldValue('gender') === 'other' ? (
+            <Form.Item
+              name="customizeGender"
+              label="Customize Gender"
+              rules={[{ required: true }]}
+            >
+              <Input />
+            </Form.Item>
+          ) : null)}
         </Form.Item>
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
