@@ -1,43 +1,43 @@
 /** @format */
 
-import React, { PureComponent } from 'react'
-import { Layout, Menu } from 'antd'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react';
+import { Layout, Menu } from 'antd';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const { Sider } = Layout
-const { SubMenu } = Menu
+const { Sider } = Layout;
+const { SubMenu } = Menu;
 
 class SiderMenu extends PureComponent {
   // submenu keys of first level
-  rootSubmenuKeys = ['sub1', 'sub2', 'sub3']
+  rootSubmenuKeys = ['sub1', 'sub2', 'sub3'];
 
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       openKeys: ['sub1'],
       selectedKeys: ['1']
-    }
+    };
   }
 
   onOpenChange = (openKeys) => {
-    const { openKeys: tempKeys } = this.state
-    const latestOpenKey = openKeys.find((key) => tempKeys.indexOf(key) === -1)
+    const { openKeys: tempKeys } = this.state;
+    const latestOpenKey = openKeys.find((key) => tempKeys.indexOf(key) === -1);
     if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-      this.setState({ openKeys })
+      this.setState({ openKeys });
     } else {
       this.setState({
         openKeys: latestOpenKey ? [latestOpenKey] : []
-      })
+      });
     }
-  }
+  };
 
   render() {
-    const { collapsed, onCollapse } = this.props
-    const { openKeys, selectedKeys } = this.state
+    const { collapsed, onCollapse } = this.props;
+    const { openKeys, selectedKeys } = this.state;
 
-    const menuProps = collapsed ? {} : { openKeys }
+    const menuProps = collapsed ? {} : { openKeys };
 
     return (
       <Sider
@@ -129,13 +129,24 @@ class SiderMenu extends PureComponent {
               <Link to="/scss">scss</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            title={
+              <span>
+                <span>弹框</span>
+              </span>
+            }
+          >
+            <Menu.Item key="11">
+              <Link to="/modal">弹框</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
-    )
+    );
   }
 }
 SiderMenu.propTypes = {
   collapsed: PropTypes.bool,
   onCollapse: PropTypes.func
-}
-export default SiderMenu
+};
+export default SiderMenu;

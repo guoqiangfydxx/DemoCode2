@@ -1,25 +1,26 @@
 /** @format */
 
-import React, { Fragment } from 'react'
-import { Layout, BackTop } from 'antd'
-import { Route, Switch, Redirect } from 'react-router-dom'
-import GlobalHeader from '../components/GlobalHeader'
-import GlobalFooter from '../components/GlobalFooter'
-import SiderMenu from '../components/SiderMenu'
-import { CopyrightOutlined } from '@ant-design/icons'
-import Home from '../pages/home'
-import Btn from '../pages/btn'
-import BizChart from '../pages/Chat/bizcharts'
-import Demo1 from '../pages/Form/demo1'
-import FormList from '../pages/Form/formList'
-import ClassForm from '../pages/Form/classForm'
-import RequireMark from '../pages/Form/requireMark'
-import NestedMessage from '../pages/Form/nestedMessage'
-import FormProvider from '../pages/Form/FormProvider'
-import Scss from '../pages/scss'
-import './index.scss'
+import React, { Fragment } from 'react';
+import { Layout, BackTop } from 'antd';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { CopyrightOutlined } from '@ant-design/icons';
+import GlobalHeader from '../components/GlobalHeader';
+import GlobalFooter from '../components/GlobalFooter';
+import SiderMenu from '../components/SiderMenu';
+import Home from '../pages/home';
+import Btn from '../pages/btn';
+import BizChart from '../pages/Chat/bizcharts';
+import Demo1 from '../pages/Form/demo1';
+import FormList from '../pages/Form/formList';
+import ClassForm from '../pages/Form/classForm';
+import RequireMark from '../pages/Form/requireMark';
+import NestedMessage from '../pages/Form/nestedMessage';
+import FormProvider from '../pages/Form/FormProvider';
+import Scss from '../pages/scss';
+import TestModal from '../pages/modal';
+import './index.scss';
 
-const { Header, Content, Footer } = Layout
+const { Header, Content, Footer } = Layout;
 
 class BasicLayout extends React.Component {
   state = {
@@ -30,20 +31,20 @@ class BasicLayout extends React.Component {
     },
     collapsed: false,
     isMobile: false
-  }
+  };
 
   componentDidMount() {}
 
   handleMenuCollapse = (collapsed: any) => {
     this.setState({
       collapsed
-    })
-  }
+    });
+  };
 
-  handleMenuClick = () => {}
+  handleMenuClick = () => {};
 
   render() {
-    const { currentUser, isMobile: mb, collapsed } = this.state
+    const { currentUser, isMobile: mb, collapsed } = this.state;
 
     const layout = (
       <Layout id="components-layout-demo-customr" className="project-container">
@@ -82,6 +83,7 @@ class BasicLayout extends React.Component {
               <Route path="/nestedMessage" exact component={NestedMessage} />
               <Route path="/form-provider" exact component={FormProvider} />
               <Route path="/scss" exact component={Scss} />
+              <Route path="/modal" exact component={TestModal} />
               <Redirect to="/" />
             </Switch>
           </Content>
@@ -89,7 +91,8 @@ class BasicLayout extends React.Component {
             <GlobalFooter
               copyright={
                 <>
-                  Copyright <CopyrightOutlined />
+                  Copyright
+                  <CopyrightOutlined />
                 </>
               }
             />
@@ -97,10 +100,10 @@ class BasicLayout extends React.Component {
           <BackTop visibilityHeight={100} />
         </Layout>
       </Layout>
-    )
+    );
 
-    return layout
+    return layout;
   }
 }
 
-export default BasicLayout
+export default BasicLayout;
