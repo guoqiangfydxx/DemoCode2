@@ -1,43 +1,43 @@
-import React, { PureComponent } from 'react';
-import { Layout, Menu } from 'antd';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+/** @format */
 
-const { Sider } = Layout;
-const { SubMenu } = Menu;
+import React, { PureComponent } from 'react'
+import { Layout, Menu } from 'antd'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+
+const { Sider } = Layout
+const { SubMenu } = Menu
 
 class SiderMenu extends PureComponent {
   // submenu keys of first level
-  rootSubmenuKeys = ['sub1', 'sub2', 'sub3'];
+  rootSubmenuKeys = ['sub1', 'sub2', 'sub3']
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       openKeys: ['sub1'],
-      selectedKeys: ['1'],
-    };
+      selectedKeys: ['1']
+    }
   }
 
   onOpenChange = (openKeys) => {
-    const { openKeys: tempKeys } = this.state;
-    const latestOpenKey = openKeys.find(
-      (key) => tempKeys.indexOf(key) === -1,
-    );
+    const { openKeys: tempKeys } = this.state
+    const latestOpenKey = openKeys.find((key) => tempKeys.indexOf(key) === -1)
     if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-      this.setState({ openKeys });
+      this.setState({ openKeys })
     } else {
       this.setState({
-        openKeys: latestOpenKey ? [latestOpenKey] : [],
-      });
+        openKeys: latestOpenKey ? [latestOpenKey] : []
+      })
     }
-  };
+  }
 
   render() {
-    const { collapsed, onCollapse } = this.props;
-    const { openKeys, selectedKeys } = this.state;
+    const { collapsed, onCollapse } = this.props
+    const { openKeys, selectedKeys } = this.state
 
-    const menuProps = collapsed ? {} : { openKeys };
+    const menuProps = collapsed ? {} : { openKeys }
 
     return (
       <Sider
@@ -56,11 +56,11 @@ class SiderMenu extends PureComponent {
         >
           <SubMenu
             key="sub1"
-            title={(
+            title={
               <span>
                 <span>Dashboard</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="1">
               <Link to="/home">首页</Link>
@@ -68,11 +68,11 @@ class SiderMenu extends PureComponent {
           </SubMenu>
           <SubMenu
             key="sub2"
-            title={(
+            title={
               <span>
                 <span>btn</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="2">
               <Link to="/btn">按钮</Link>
@@ -80,11 +80,11 @@ class SiderMenu extends PureComponent {
           </SubMenu>
           <SubMenu
             key="sub3"
-            title={(
+            title={
               <span>
                 <span>图标</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="3">
               <Link to="/chat">图标</Link>
@@ -92,11 +92,11 @@ class SiderMenu extends PureComponent {
           </SubMenu>
           <SubMenu
             key="sub4"
-            title={(
+            title={
               <span>
                 <span>表单</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="4">
               <Link to="/form1">普通表单</Link>
@@ -117,13 +117,25 @@ class SiderMenu extends PureComponent {
               <Link to="/form-provider">FormProvider</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub5"
+            title={
+              <span>
+                <span>Scss</span>
+              </span>
+            }
+          >
+            <Menu.Item key="10">
+              <Link to="/scss">scss</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
-    );
+    )
   }
 }
 SiderMenu.propTypes = {
   collapsed: PropTypes.bool,
-  onCollapse: PropTypes.func,
-};
-export default SiderMenu;
+  onCollapse: PropTypes.func
+}
+export default SiderMenu
