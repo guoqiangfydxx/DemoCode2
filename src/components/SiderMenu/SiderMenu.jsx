@@ -117,6 +117,18 @@ class SiderMenu extends PureComponent {
               <Link to="/form-provider">FormProvider</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub5"
+            title={(
+              <span>
+                <span>弹框</span>
+              </span>
+            )}
+          >
+            <Menu.Item key="11">
+              <Link to="/modal">弹框</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

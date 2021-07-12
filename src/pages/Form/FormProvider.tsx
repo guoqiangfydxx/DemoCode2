@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Form,
   Input,
@@ -7,9 +7,9 @@ import {
   Button,
   Avatar,
   Typography,
-} from "antd";
-import { SmileOutlined, UserOutlined } from "@ant-design/icons";
-import { FormInstance } from "antd/lib/form";
+} from 'antd';
+import { SmileOutlined, UserOutlined } from '@ant-design/icons';
+import { FormInstance } from 'antd/lib/form';
 
 // 利用Form.Provider可以实现多个表单之间的互动，这个对于在一个页面中存在多个表单的场景应该来说是非常实用的
 const layout = {
@@ -51,7 +51,7 @@ const useResetFormOnCloseModal = ({
   }, [visible]);
 };
 
-const ModalForm: React.FC<ModalFormProps> = ({ visible, onCancel }) => {
+const ModalForm: React.FC<ModalFormProps> = ({ visible, onCancel }: any) => {
   const [form] = Form.useForm();
 
   useResetFormOnCloseModal({
@@ -94,17 +94,17 @@ const Demo = () => {
   };
 
   const onFinish = (values: any) => {
-    console.log("Finish:", values);
+    console.log('Finish:', values);
   };
 
   return (
     <>
       <Form.Provider
         onFormFinish={(name, { values, forms }) => {
-          console.log("name>>>>", name, values, forms);
-          if (name === "userForm") {
+          console.log('name>>>>', name, values, forms);
+          if (name === 'userForm') {
             const { basicForm } = forms;
-            const users = basicForm.getFieldValue("users") || [];
+            const users = basicForm.getFieldValue('users') || [];
             basicForm.setFieldsValue({ users: [...users, values] });
             setVisible(false);
           }
@@ -120,24 +120,30 @@ const Demo = () => {
           </Form.Item>
           <Form.Item
             label="User List"
-            shouldUpdate={(prevValues, curValues) =>
-              prevValues.users !== curValues.users
-            }
+            shouldUpdate={(prevValues, curValues) => prevValues.users !== curValues.users}
           >
             {({ getFieldValue }) => {
-              const users: UserType[] = getFieldValue("users") || [];
+              const users: UserType[] = getFieldValue('users') || [];
               return users.length ? (
                 <ul>
                   {users.map((user, index) => (
                     <li key={index} className="user">
                       <Avatar icon={<UserOutlined />} />
-                      {user.name} - {user.age}
+                      {user.name}
+                      {' '}
+                      -
+                      {' '}
+                      {user.age}
                     </li>
                   ))}
                 </ul>
               ) : (
                 <Typography.Text className="ant-form-text" type="secondary">
-                  ( <SmileOutlined /> No user yet. )
+                  (
+                  {' '}
+                  <SmileOutlined />
+                  {' '}
+                  No user yet. )
                 </Typography.Text>
               );
             }}
@@ -148,7 +154,7 @@ const Demo = () => {
             </Button>
             <Button
               htmlType="button"
-              style={{ margin: "0 8px" }}
+              style={{ margin: '0 8px' }}
               onClick={showUserModal}
             >
               Add User

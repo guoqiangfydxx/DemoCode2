@@ -33,6 +33,9 @@ module.exports = {
     'react/state-in-constructor': 'off',
     'no-shadow': 'off',
     'no-template-curly-in-string': 'off',
+    'react/no-array-index-key': 'off',
+    'no-plusplus': 'off',
+    'no-restricted-syntax': 'off'
   },
   settings: {
     webpack: {
