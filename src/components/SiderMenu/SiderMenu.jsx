@@ -129,6 +129,18 @@ class SiderMenu extends PureComponent {
               <Link to="/modal">弹框</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub6"
+            title={(
+              <span>
+                <span>iframe</span>
+              </span>
+            )}
+          >
+            <Menu.Item key="11">
+              <Link to="/iframe">iframe</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
