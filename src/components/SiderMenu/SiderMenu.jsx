@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { PureComponent } from 'react';
 import { Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
@@ -15,20 +17,18 @@ class SiderMenu extends PureComponent {
 
     this.state = {
       openKeys: ['sub1'],
-      selectedKeys: ['1'],
+      selectedKeys: ['1']
     };
   }
 
   onOpenChange = (openKeys) => {
     const { openKeys: tempKeys } = this.state;
-    const latestOpenKey = openKeys.find(
-      (key) => tempKeys.indexOf(key) === -1,
-    );
+    const latestOpenKey = openKeys.find((key) => tempKeys.indexOf(key) === -1);
     if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
       this.setState({ openKeys });
     } else {
       this.setState({
-        openKeys: latestOpenKey ? [latestOpenKey] : [],
+        openKeys: latestOpenKey ? [latestOpenKey] : []
       });
     }
   };
@@ -56,11 +56,11 @@ class SiderMenu extends PureComponent {
         >
           <SubMenu
             key="sub1"
-            title={(
+            title={
               <span>
                 <span>Dashboard</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="1">
               <Link to="/home">首页</Link>
@@ -68,11 +68,11 @@ class SiderMenu extends PureComponent {
           </SubMenu>
           <SubMenu
             key="sub2"
-            title={(
+            title={
               <span>
                 <span>btn</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="2">
               <Link to="/btn">按钮</Link>
@@ -80,11 +80,11 @@ class SiderMenu extends PureComponent {
           </SubMenu>
           <SubMenu
             key="sub3"
-            title={(
+            title={
               <span>
                 <span>图标</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="3">
               <Link to="/chat">图标</Link>
@@ -92,11 +92,11 @@ class SiderMenu extends PureComponent {
           </SubMenu>
           <SubMenu
             key="sub4"
-            title={(
+            title={
               <span>
                 <span>表单</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="4">
               <Link to="/form1">普通表单</Link>
@@ -119,11 +119,22 @@ class SiderMenu extends PureComponent {
           </SubMenu>
           <SubMenu
             key="sub5"
-            title={(
+            title={
+              <span>
+                <span>Scss</span>
+              </span>
+            }
+          >
+            <Menu.Item key="10">
+              <Link to="/scss">scss</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            title={
               <span>
                 <span>弹框</span>
               </span>
-            )}
+            }
           >
             <Menu.Item key="11">
               <Link to="/modal">弹框</Link>
@@ -148,6 +159,6 @@ class SiderMenu extends PureComponent {
 }
 SiderMenu.propTypes = {
   collapsed: PropTypes.bool,
-  onCollapse: PropTypes.func,
+  onCollapse: PropTypes.func
 };
 export default SiderMenu;

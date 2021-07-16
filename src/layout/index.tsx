@@ -16,6 +16,7 @@ import ClassForm from '../pages/Form/classForm';
 import RequireMark from '../pages/Form/requireMark';
 import NestedMessage from '../pages/Form/nestedMessage';
 import FormProvider from '../pages/Form/FormProvider';
+import Scss from '../pages/scss';
 import TestModal from '../pages/modal';
 import Iframe from '../pages/iframe';
 import './index.scss';
@@ -27,21 +28,21 @@ class BasicLayout extends React.Component {
     currentUser: {
       name: '测试',
       avatar:
-        'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+        'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png'
     },
     collapsed: false,
-    isMobile: false,
-  }
+    isMobile: false
+  };
 
   componentDidMount() {}
 
   handleMenuCollapse = (collapsed: any) => {
     this.setState({
-      collapsed,
+      collapsed
     });
-  }
+  };
 
-  handleMenuClick = () => {}
+  handleMenuClick = () => {};
 
   render() {
     const { currentUser, isMobile: mb, collapsed } = this.state;
@@ -69,7 +70,7 @@ class BasicLayout extends React.Component {
             style={{
               margin: '24px 24px 0',
               background: '#fff',
-              height: '100%',
+              height: '100%'
             }}
           >
             <Switch>
@@ -82,6 +83,7 @@ class BasicLayout extends React.Component {
               <Route path="/requireMark" exact component={RequireMark} />
               <Route path="/nestedMessage" exact component={NestedMessage} />
               <Route path="/form-provider" exact component={FormProvider} />
+              <Route path="/scss" exact component={Scss} />
               <Route path="/modal" exact component={TestModal} />
               <Route path="/iframe" exact component={Iframe} />
               <Redirect to="/" />
@@ -89,13 +91,12 @@ class BasicLayout extends React.Component {
           </Content>
           <Footer style={{ padding: 0 }}>
             <GlobalFooter
-              copyright={(
+              copyright={
                 <>
                   Copyright
-                  {' '}
                   <CopyrightOutlined />
                 </>
-              )}
+              }
             />
           </Footer>
           <BackTop visibilityHeight={100} />
