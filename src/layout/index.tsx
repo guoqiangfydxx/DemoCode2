@@ -21,6 +21,7 @@ import TestModal from '../pages/modal';
 import Iframe from '../pages/iframe';
 import State from '../pages/state';
 import Menu from '../pages/Menu';
+import InputNumber from '../pages/inputNumber';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -90,6 +91,7 @@ class BasicLayout extends React.Component {
               <Route path="/iframe" exact component={Iframe} />
               <Route path="/state" exact component={State} />
               <Route path="/menu" exact component={Menu} />
+              <Route path="/inputnumber" exact component={InputNumber} />
               <Redirect to="/" />
             </Switch>
           </Content>

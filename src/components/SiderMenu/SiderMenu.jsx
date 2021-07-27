@@ -176,6 +176,18 @@ class SiderMenu extends PureComponent {
               <Link to="/menu">Menu</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub9"
+            title={
+              <span>
+                <span>InputNumber</span>
+              </span>
+            }
+          >
+            <Menu.Item key="14">
+              <Link to="/inputnumber">InputNumber</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

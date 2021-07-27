@@ -1,22 +1,24 @@
+/** @format */
+
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: ['plugin:react/recommended', 'airbnb'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/jsx-filename-extension': [
       2,
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] }
     ],
     'import/extensions': 'off',
     'no-use-before-define': 'off',
@@ -36,15 +38,17 @@ module.exports = {
     'comma-dangle': 'off',
     'react/jsx-wrap-multilines': 'off',
     'import/newline-after-import': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'react/jsx-curly-newline': 'off'
   },
   settings: {
     webpack: {
-      config: 'config/webpack.config.js', // 这是你设置alias的配置文件路径
+      config: 'config/webpack.config.js' // 这是你设置alias的配置文件路径
     },
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
-  },
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    }
+  }
 };
