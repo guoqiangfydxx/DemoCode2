@@ -1,6 +1,11 @@
+/** @format */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/lib/locale/zh_CN';
+import 'moment/locale/zh-cn';
 import './index.css';
 // import App from './App';
 import App from './layout';
@@ -9,10 +14,12 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <ConfigProvider locale={zhCN} prefixCls="myAnt">
+        <App />
+      </ConfigProvider>
     </React.StrictMode>
   </BrowserRouter>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
