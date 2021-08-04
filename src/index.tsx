@@ -6,10 +6,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 import 'moment/locale/zh-cn';
-import './index.css';
 // import App from './App';
 import App from './layout';
 import reportWebVitals from './reportWebVitals';
+import './index.less';
 
 ReactDOM.render(
   <BrowserRouter>

@@ -28,6 +28,7 @@ const postcssNormalize = require('postcss-normalize');
 const getClientEnvironment = require('./env');
 const modules = require('./modules');
 const paths = require('./paths');
+const devMode = process.env.NODE_ENV === 'development';
 
 const appPackageJson = require(paths.appPackageJson);
 
@@ -150,12 +151,7 @@ module.exports = function (webpackEnv) {
         {
           loader: require.resolve(preProcessor),
           options: {
-            sourceMap: true,
-            sassOptions: {
-              modifyVars: {
-                'ant-prefix': 'myAnt'
-              }
-            }
+            sourceMap: true
           }
         }
       );
@@ -426,6 +422,15 @@ module.exports = function (webpackEnv) {
                       }
                     }
                   ],
+                  [
+                    'import',
+                    {
+                      libraryName: 'antd',
+                      libraryDirectory: 'es',
+                      style: true // `style: true` 会加载 less 文件
+                    }
+                  ],
+
                   isEnvDevelopment &&
                     shouldUseReactRefresh &&
                     require.resolve('react-refresh/babel')
@@ -465,6 +470,27 @@ module.exports = function (webpackEnv) {
                 sourceMaps: shouldUseSourceMap,
                 inputSourceMap: shouldUseSourceMap
               }
+            },
+            {
+              test: /\.less$/,
+              use: [
+                devMode
+                  ? require.resolve('style-loader')
+                  : MiniCssExtractPlugin.loader,
+                'css-loader',
+                {
+                  loader: 'less-loader',
+                  options: {
+                    lessOptions: {
+                      javascriptEnabled: true,
+                      modifyVars: {
+                        '@primary-color': '#275EFF',
+                        '@ant-prefix': 'myAnt'
+                      }
+                    }
+                  }
+                }
+              ]
             },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
