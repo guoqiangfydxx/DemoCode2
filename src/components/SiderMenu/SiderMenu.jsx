@@ -212,6 +212,18 @@ class SiderMenu extends PureComponent {
               <Link to="/network">NetWork</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub12"
+            title={
+              <span>
+                <span>date</span>
+              </span>
+            }
+          >
+            <Menu.Item key="18">
+              <Link to="/date">date</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

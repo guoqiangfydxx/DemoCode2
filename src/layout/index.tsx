@@ -24,6 +24,7 @@ import Menu from '../pages/Menu';
 import InputNumber from '../pages/inputNumber';
 import Hook from '../pages/hooks';
 import NetWork from '../pages/network';
+import Date from '../pages/date';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -96,6 +97,7 @@ class BasicLayout extends React.Component {
               <Route path="/inputnumber" exact component={InputNumber} />
               <Route path="/hook" exact component={Hook} />
               <Route path="/network" exact component={NetWork} />
+              <Route path="/date" exact component={Date} />
               <Redirect to="/" />
             </Switch>
           </Content>

@@ -40,7 +40,9 @@ module.exports = {
     'import/newline-after-import': 'off',
     'implicit-arrow-linebreak': 'off',
     'react/jsx-curly-newline': 'off',
-    'no-unused-expressions': 'off'
+    'no-unused-expressions': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'object-curly-newline': 'off'
   },
   settings: {
     webpack: {
