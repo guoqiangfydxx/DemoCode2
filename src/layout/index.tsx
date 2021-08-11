@@ -23,6 +23,7 @@ import State from '../pages/state';
 import Menu from '../pages/Menu';
 import InputNumber from '../pages/inputNumber';
 import Hook from '../pages/hooks';
+import NetWork from '../pages/network';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -94,6 +95,7 @@ class BasicLayout extends React.Component {
               <Route path="/menu" exact component={Menu} />
               <Route path="/inputnumber" exact component={InputNumber} />
               <Route path="/hook" exact component={Hook} />
+              <Route path="/network" exact component={NetWork} />
               <Redirect to="/" />
             </Switch>
           </Content>

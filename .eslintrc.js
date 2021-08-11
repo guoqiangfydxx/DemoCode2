@@ -39,7 +39,8 @@ module.exports = {
     'react/jsx-wrap-multilines': 'off',
     'import/newline-after-import': 'off',
     'implicit-arrow-linebreak': 'off',
-    'react/jsx-curly-newline': 'off'
+    'react/jsx-curly-newline': 'off',
+    'no-unused-expressions': 'off'
   },
   settings: {
     webpack: {
