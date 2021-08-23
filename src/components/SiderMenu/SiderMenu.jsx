@@ -224,6 +224,18 @@ class SiderMenu extends PureComponent {
               <Link to="/date">date</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub13"
+            title={
+              <span>
+                <span>吸顶</span>
+              </span>
+            }
+          >
+            <Menu.Item key="19">
+              <Link to="/xiding">吸顶</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
