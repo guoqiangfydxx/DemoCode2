@@ -27,6 +27,7 @@ import NetWork from '../pages/network';
 import Date from '../pages/date';
 import Xiding from '../pages/xiding';
 import Test from '../pages/test';
+import TestInterval from '../pages/hooks/interval';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -102,6 +103,7 @@ class BasicLayout extends React.Component {
               <Route path="/date" exact component={Date} />
               <Route path="/xiding" exact component={Xiding} />
               <Route path="/test" exact component={Test} />
+              <Route path="/interval" exact component={TestInterval} />
               <Redirect to="/" />
             </Switch>
           </Content>

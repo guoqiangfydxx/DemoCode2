@@ -248,6 +248,18 @@ class SiderMenu extends PureComponent {
               <Link to="/test">测试</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub15"
+            title={
+              <span>
+                <span>定时器</span>
+              </span>
+            }
+          >
+            <Menu.Item key="22">
+              <Link to="/interval">定时器</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
