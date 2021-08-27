@@ -28,7 +28,7 @@ class Xiding extends Component {
       <div>
         {/* <header /> */}
         <div className="targetBox">sticky元素，吸顶元素</div>
-        <footer />
+        <footer className="xidingFooter" />
       </div>
     );
   }

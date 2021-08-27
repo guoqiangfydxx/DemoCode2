@@ -42,7 +42,8 @@ module.exports = {
     'react/jsx-curly-newline': 'off',
     'no-unused-expressions': 'off',
     'react/jsx-one-expression-per-line': 'off',
-    'object-curly-newline': 'off'
+    'object-curly-newline': 'off',
+    'max-len': 'off'
   },
   settings: {
     webpack: {
