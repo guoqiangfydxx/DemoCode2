@@ -29,6 +29,7 @@ import Xiding from '../pages/xiding';
 import Test from '../pages/test';
 import TestInterval from '../pages/hooks/interval';
 import Btn2 from '../pages/btn/btn2';
+import RequireForm from '../pages/Form/requireForm';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -106,6 +107,7 @@ class BasicLayout extends React.Component {
               <Route path="/test" exact component={Test} />
               <Route path="/interval" exact component={TestInterval} />
               <Route path="/btn2" exact component={Btn2} />
+              <Route path="/requireform" exact component={RequireForm} />
               <Redirect to="/" />
             </Switch>
           </Content>
