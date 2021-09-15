@@ -30,6 +30,7 @@ import Test from '../pages/test';
 import TestInterval from '../pages/hooks/interval';
 import Btn2 from '../pages/btn/btn2';
 import RequireForm from '../pages/Form/requireForm';
+import Input from '../pages/Form/input';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -108,6 +109,7 @@ class BasicLayout extends React.Component {
               <Route path="/interval" exact component={TestInterval} />
               <Route path="/btn2" exact component={Btn2} />
               <Route path="/requireform" exact component={RequireForm} />
+              <Route path="/input" exact component={Input} />
               <Redirect to="/" />
             </Switch>
           </Content>

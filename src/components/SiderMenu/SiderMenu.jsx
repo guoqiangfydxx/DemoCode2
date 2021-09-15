@@ -119,6 +119,9 @@ class SiderMenu extends PureComponent {
             <Menu.Item key="28">
               <Link to="/requireform">必填校验</Link>
             </Menu.Item>
+            <Menu.Item key="29">
+              <Link to="/input">输入框</Link>
+            </Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub5"
