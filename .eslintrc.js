@@ -43,7 +43,9 @@ module.exports = {
     'no-unused-expressions': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'object-curly-newline': 'off',
-    'max-len': 'off'
+    'max-len': 'off',
+    'max-classes-per-file': 'off',
+    'react/prefer-stateless-function': 'off'
   },
   settings: {
     webpack: {
