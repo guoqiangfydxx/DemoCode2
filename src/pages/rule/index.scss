@@ -1,0 +1,13 @@
+/** @format */
+
+.scena-horizontal {
+  left: calc(var(--menu) + 30px);
+  width: calc(100% - 30px - var(--menu) - var(--tabs));
+  height: 30px !important;
+}
+.scena-vertical {
+  top: 30px;
+  left: var(--menu);
+  height: calc(100% - 30px);
+  width: 30px !important;
+}

@@ -7,6 +7,8 @@
     "@antv/g2plot": "^2.3.24",
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
+    "@scena/react-guides": "^0.16.0",
+    "@scena/react-ruler": "^0.8.1",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
