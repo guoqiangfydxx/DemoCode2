@@ -33,6 +33,7 @@ import RequireForm from '../pages/Form/requireForm';
 import Input from '../pages/Form/input';
 import TestContext from '../pages/context';
 import Rule from '../pages/rule';
+import Canvas from '../pages/canvas';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -114,6 +115,7 @@ class BasicLayout extends React.Component {
               <Route path="/input" exact component={Input} />
               <Route path="/context" exact component={TestContext} />
               <Route path="/rule" exact component={Rule} />
+              <Route path="/canvas" exact component={Canvas} />
               <Redirect to="/" />
             </Switch>
           </Content>
