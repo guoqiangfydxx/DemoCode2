@@ -6,8 +6,11 @@ import { DraggableContainer, DraggableChild } from 'react-dragline';
 class Example extends React.Component {
   state = {
     childs: [
-      { id: 1, position: { x: 100, y: 10 } },
-      { id: 2, position: { x: 400, y: 200 } }
+      { id: 1, background: '#8ce8df', size: 100, position: { x: 100, y: 0 } },
+      { id: 2, background: '#8ce8df', size: 100, position: { x: 200, y: 106 } },
+      { id: 3, background: '#afc7fd', size: 102, position: { x: 500, y: 106 } },
+      { id: 4, background: '#d2aff6', size: 150, position: { x: 100, y: 316 } },
+      { id: 5, background: '#fee493', size: 200, position: { x: 480, y: 376 } }
     ]
   };
 
@@ -20,12 +23,12 @@ class Example extends React.Component {
 
     return (
       <DraggableContainer style={containerStyle}>
-        {childs.map(({ id, position }, index) => {
+        {childs.map(({ id, position, size, background }, index) => {
           const style = {
-            width: 100,
-            height: 100,
+            width: size,
+            height: size,
             cursor: 'move',
-            background: '#8ce8df'
+            background
           };
 
           return (
