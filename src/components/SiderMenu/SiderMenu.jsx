@@ -326,6 +326,18 @@ class SiderMenu extends PureComponent {
               <Link to="/dragline">DragLine</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub24"
+            title={
+              <span>
+                <span>prompt</span>
+              </span>
+            }
+          >
+            <Menu.Item key="34">
+              <Link to="/prompt">Prompt</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
