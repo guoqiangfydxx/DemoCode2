@@ -36,6 +36,7 @@ import Rule from '../pages/rule';
 import Canvas from '../pages/canvas';
 import DragLine from '../pages/dragline';
 import TestPrompt from '../pages/prompt';
+import FormRender from '../pages/Form/formRender';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -120,6 +121,7 @@ class BasicLayout extends React.Component {
               <Route path="/canvas" exact component={Canvas} />
               <Route path="/dragline" exact component={DragLine} />
               <Route path="/prompt" exact component={TestPrompt} />
+              <Route path="/formrender" exact component={FormRender} />
               <Redirect to="/" />
             </Switch>
           </Content>
