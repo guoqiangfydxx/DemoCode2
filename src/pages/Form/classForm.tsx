@@ -1,17 +1,17 @@
+/** @format */
+
 import React from 'react';
-import {
-  Form, Input, Button, Select,
-} from 'antd';
+import { Form, Input, Button, Select } from 'antd';
 import { FormInstance } from 'antd/lib/form';
 // antd4的form在class组件中不再挂载到this.props上面了，目前的方法都是直接通过ref来获取对应的表单实例
 const { Option } = Select;
 
 const layout = {
   labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
+  wrapperCol: { span: 16 }
 };
 const tailLayout = {
-  wrapperCol: { offset: 8, span: 16 },
+  wrapperCol: { offset: 8, span: 16 }
 };
 
 // function fixed(name: string | null): string {
@@ -56,7 +56,7 @@ class Demo extends React.Component {
   onFill = () => {
     this.formRef.current!.setFieldsValue({
       note: 'Hello world!',
-      gender: 'male',
+      gender: 'male'
     });
   };
 
@@ -65,6 +65,7 @@ class Demo extends React.Component {
   };
 
   render() {
+    console.log('render>>>>');
     return (
       <Form
         {...layout}
@@ -88,17 +89,21 @@ class Demo extends React.Component {
         </Form.Item>
         <Form.Item
           noStyle
-          shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
+          shouldUpdate={(prevValues, currentValues) =>
+            prevValues.gender !== currentValues.gender
+          }
         >
-          {({ getFieldValue }) => (getFieldValue('gender') === 'other' ? (
-            <Form.Item
-              name="customizeGender"
-              label="Customize Gender"
-              rules={[{ required: true }]}
-            >
-              <Input />
-            </Form.Item>
-          ) : null)}
+          {({ getFieldValue }) =>
+            (getFieldValue('gender') === 'other' ? (
+              <Form.Item
+                name="customizeGender"
+                label="Customize Gender"
+                rules={[{ required: true }]}
+              >
+                <Input />
+              </Form.Item>
+            ) : null)
+          }
         </Form.Item>
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
