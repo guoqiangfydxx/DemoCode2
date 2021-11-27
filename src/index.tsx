@@ -6,16 +6,18 @@ import { BrowserRouter } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 import 'moment/locale/zh-cn';
-// import App from './App';
 import App from './layout';
 import reportWebVitals from './reportWebVitals';
+import { ConfirmProdiver, defaultGetPrefix } from './util';
 import './index.less';
 
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
       <ConfigProvider locale={zhCN} prefixCls="myAnt">
+        {/* <ConfirmProdiver value={{ getPrefixCls: defaultGetPrefix }}> */}
         <App />
+        {/* </ConfirmProdiver> */}
       </ConfigProvider>
     </React.StrictMode>
   </BrowserRouter>,

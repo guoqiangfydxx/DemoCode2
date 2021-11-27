@@ -45,7 +45,13 @@ module.exports = {
     'object-curly-newline': 'off',
     'max-len': 'off',
     'max-classes-per-file': 'off',
-    'react/prefer-stateless-function': 'off'
+    'react/prefer-stateless-function': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'no-spaced-func': 'off',
+    'no-unused-vars': 'off',
+    'no-param-reassign': 'off',
+    'no-multi-assign': 'off',
+    'consistent-return': 'off'
   },
   settings: {
     webpack: {

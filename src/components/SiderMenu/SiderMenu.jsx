@@ -125,6 +125,18 @@ class SiderMenu extends PureComponent {
             <Menu.Item key="35">
               <Link to="/formrender">表单渲染</Link>
             </Menu.Item>
+            <Menu.Item key="36">
+              <Link to="/formily">表单Formily</Link>
+            </Menu.Item>
+            <Menu.Item key="37">
+              <Link to="/hookform">hoosk-form</Link>
+            </Menu.Item>
+            <Menu.Item key="38">
+              <Link to="/rcform">rc-form</Link>
+            </Menu.Item>
+            <Menu.Item key="39">
+              <Link to="/radio">radio</Link>
+            </Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub5"
@@ -339,6 +351,30 @@ class SiderMenu extends PureComponent {
           >
             <Menu.Item key="34">
               <Link to="/prompt">Prompt</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub40"
+            title={
+              <span>
+                <span>picker</span>
+              </span>
+            }
+          >
+            <Menu.Item key="40">
+              <Link to="/picker">picker</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="sub41"
+            title={
+              <span>
+                <span>zarm</span>
+              </span>
+            }
+          >
+            <Menu.Item key="41">
+              <Link to="/zarm">zarm</Link>
             </Menu.Item>
           </SubMenu>
         </Menu>

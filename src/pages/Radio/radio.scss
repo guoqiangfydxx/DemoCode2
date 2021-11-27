@@ -1,0 +1,25 @@
+/** @format */
+
+.puzzle-ad-radio-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  > span {
+    margin-left: 8px;
+  }
+}
+
+.puzzle-ad-radio-group-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.puzzle-form-label {
+  margin-right: 10px;
+}
+
+.puzzle-form-control {
+  display: flex;
+  align-items: center;
+}

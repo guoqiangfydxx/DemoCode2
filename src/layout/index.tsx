@@ -37,6 +37,12 @@ import Canvas from '../pages/canvas';
 import DragLine from '../pages/dragline';
 import TestPrompt from '../pages/prompt';
 import FormRender from '../pages/Form/formRender';
+import Formily from '../pages/Form/formily';
+import HooksForm from '../pages/Form/react-hooks-form';
+import RcForm from '../pages/Form/rc';
+import Radio from '../pages/Form/radio';
+import Picker from '../pages/picker';
+import Zarm from '../pages/zarm';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -122,6 +128,12 @@ class BasicLayout extends React.Component {
               <Route path="/dragline" exact component={DragLine} />
               <Route path="/prompt" exact component={TestPrompt} />
               <Route path="/formrender" exact component={FormRender} />
+              <Route path="/formily" exact component={Formily} />
+              <Route path="/hookform" exact component={HooksForm} />
+              <Route path="/rcform" exact component={RcForm} />
+              <Route path="/radio" exact component={Radio} />
+              <Route path="/picker" exact component={Picker} />
+              <Route path="/zarm" exact component={Zarm} />
               <Redirect to="/" />
             </Switch>
           </Content>

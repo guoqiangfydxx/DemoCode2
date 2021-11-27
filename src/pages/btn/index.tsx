@@ -59,6 +59,7 @@ function TestBtn() {
           <span className={styles.test} style={{ width: `${count}%` }} />
         </TestButton>
       </div>
+      <p className={styles.star}>*</p>
     </>
   );
 }

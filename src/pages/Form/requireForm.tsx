@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
+import Radio from '../Radio';
 
 const formItemLayout = {
   labelCol: { span: 4 },
@@ -73,6 +74,19 @@ const DynamicRule = () => {
       </Form.Item>
       <Form.Item {...formTailLayout} name="checked" valuePropName="checked">
         <Checkbox onChange={onCheckboxChange}>Nickname is required</Checkbox>
+      </Form.Item>
+      <Form.Item {...formTailLayout} name="gender">
+        <Radio.Group
+          options={[
+            { label: '苹果3', value: 'apple' },
+            { label: '橘子2', value: 'orange' },
+            { label: '香蕉1', value: 'banan' }
+          ]}
+        >
+          {/* <Radio value="apple">苹果</Radio>
+          <Radio value="orange">橘子</Radio>
+          <Radio value="banana">香蕉</Radio> */}
+        </Radio.Group>
       </Form.Item>
       <Form.Item {...formTailLayout}>
         <Button type="primary" onClick={onCheck}>
