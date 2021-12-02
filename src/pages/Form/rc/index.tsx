@@ -18,6 +18,13 @@ const Demo = () => {
     console.log('errors', errors);
   }
 
+  function test(_: any, value: any, callback: any) {
+    if (value === 'apple') {
+      callback('禁止选择苹果');
+    }
+    callback();
+  }
+
   return (
     <Form
       onFinish={(values) => {
@@ -58,10 +65,7 @@ const Demo = () => {
           <Radio value="banana">香蕉</Radio> */}
         </Radio.Group>
       </Field>
-      <Field
-        name="zarm"
-        rules={[{ required: true, message: 'picker不能为空' }]}
-      >
+      <Field name="zarm" rules={[{ validator: test }]}>
         <Zarm />
       </Field>
 

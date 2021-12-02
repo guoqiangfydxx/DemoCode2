@@ -43,6 +43,7 @@ import RcForm from '../pages/Form/rc';
 import Radio from '../pages/Form/radio';
 import Picker from '../pages/picker';
 import Zarm from '../pages/zarm';
+import BreadCrumb from '../pages/breadCurmb';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -134,6 +135,7 @@ class BasicLayout extends React.Component {
               <Route path="/radio" exact component={Radio} />
               <Route path="/picker" exact component={Picker} />
               <Route path="/zarm" exact component={Zarm} />
+              <Route path="/crumb" exact component={BreadCrumb} />
               <Redirect to="/" />
             </Switch>
           </Content>
