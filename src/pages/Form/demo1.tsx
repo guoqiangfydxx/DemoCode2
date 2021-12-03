@@ -63,7 +63,7 @@ function Demo() {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       form={form}
-      requiredMark
+      // requiredMark
       onFieldsChange={handleFieldsChange}
       onValuesChange={handleValuesChange}
       validateMessages={validateMessages}
@@ -82,7 +82,7 @@ function Demo() {
       </Form.Item>
 
       <Form.Item
-        hidden={false}
+        // hidden={false}
         label="Password"
         name="password"
         rules={[{ required: true }]}
