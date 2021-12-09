@@ -46,6 +46,7 @@ import Zarm from '../pages/zarm';
 import BreadCrumb from '../pages/breadCurmb';
 import Rnd from '../pages/reactRnd';
 import Sort from '../pages/sort';
+import PointerEvent from '../pages/css';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -140,6 +141,7 @@ class BasicLayout extends React.Component {
               <Route path="/crumb" exact component={BreadCrumb} />
               <Route path="/rnd" exact component={Rnd} />
               <Route path="/sort" exact component={Sort} />
+              <Route path="/pointer" exact component={PointerEvent} />
               <Redirect to="/" />
             </Switch>
           </Content>

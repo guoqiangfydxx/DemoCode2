@@ -413,6 +413,18 @@ class SiderMenu extends PureComponent {
               <Link to="/sort">sort</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub45"
+            title={
+              <span>
+                <span>pointer-events</span>
+              </span>
+            }
+          >
+            <Menu.Item key="45">
+              <Link to="/pointer">pointer-events</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
