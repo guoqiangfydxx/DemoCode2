@@ -425,6 +425,18 @@ class SiderMenu extends PureComponent {
               <Link to="/pointer">pointer-events</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub46"
+            title={
+              <span>
+                <span>multi-radio</span>
+              </span>
+            }
+          >
+            <Menu.Item key="46">
+              <Link to="/testRadio">multi-radio</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

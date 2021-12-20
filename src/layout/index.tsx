@@ -47,6 +47,7 @@ import BreadCrumb from '../pages/breadCurmb';
 import Rnd from '../pages/reactRnd';
 import Sort from '../pages/sort';
 import PointerEvent from '../pages/css';
+import TestRadio from '../pages/MultiRadio';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -142,6 +143,7 @@ class BasicLayout extends React.Component {
               <Route path="/rnd" exact component={Rnd} />
               <Route path="/sort" exact component={Sort} />
               <Route path="/pointer" exact component={PointerEvent} />
+              <Route path="/testRadio" exact component={TestRadio} />
               <Redirect to="/" />
             </Switch>
           </Content>
