@@ -2,10 +2,17 @@
 
 import React from 'react';
 import moment from 'moment';
+import { Form, Select } from 'antd';
 import Img from './test.jpeg';
 import './index.scss';
+const { Option } = Select;
 function Test() {
   // width = 20vw * num + 4vw * (num + 1)
+
+  const handleSearch = () => {
+    console.log('search');
+  };
+
   return (
     <div className="test-box">
       <div className="test-header">
@@ -48,6 +55,16 @@ function Test() {
           </div>
         </div>
       </div>
+      <Form>
+        <Form.Item name="test">
+          <Select
+            showSearch
+            filterOption={false}
+            onSearch={handleSearch}
+            notFoundContent={null}
+          />
+        </Form.Item>
+      </Form>
     </div>
   );
 }
