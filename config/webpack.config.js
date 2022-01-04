@@ -24,11 +24,13 @@ const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpack
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-const postcssNormalize = require('postcss-normalize');
+// 这个覆盖掉了原本antd的样式
+// const postcssNormalize = require('postcss-normalize');
 const getClientEnvironment = require('./env');
 const modules = require('./modules');
 const paths = require('./paths');
 const devMode = process.env.NODE_ENV === 'development';
+const { theme } = require('./config');
 
 const appPackageJson = require(paths.appPackageJson);
 
@@ -129,11 +131,11 @@ module.exports = function (webpackEnv) {
                 flexbox: 'no-2009'
               },
               stage: 3
-            }),
+            })
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
-            postcssNormalize()
+            // postcssNormalize()
           ],
           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment
         }
@@ -483,10 +485,7 @@ module.exports = function (webpackEnv) {
                   options: {
                     lessOptions: {
                       javascriptEnabled: true,
-                      modifyVars: {
-                        '@primary-color': '#275EFF',
-                        '@ant-prefix': 'myAnt'
-                      }
+                      modifyVars: theme
                     }
                   }
                 }
