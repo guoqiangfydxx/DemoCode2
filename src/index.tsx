@@ -9,18 +9,20 @@ import 'moment/locale/zh-cn';
 import App from './layout';
 import reportWebVitals from './reportWebVitals';
 import { ConfirmProdiver, defaultGetPrefix } from './util';
+import Context from './pages/context';
 import './index.less';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <ConfigProvider locale={zhCN} prefixCls="myAnt">
-        {/* <ConfirmProdiver value={{ getPrefixCls: defaultGetPrefix }}> */}
-        <App />
-        {/* </ConfirmProdiver> */}
-      </ConfigProvider>
-    </React.StrictMode>
-  </BrowserRouter>,
+  // <BrowserRouter>
+  //   <React.StrictMode>
+  //     <ConfigProvider locale={zhCN} prefixCls="myAnt">
+  //       {/* <ConfirmProdiver value={{ getPrefixCls: defaultGetPrefix }}> */}
+  //       <App />
+  //       {/* </ConfirmProdiver> */}
+  //     </ConfigProvider>
+  //   </React.StrictMode>
+  // </BrowserRouter>,
+  <Context />,
   document.getElementById('root')
 );
 

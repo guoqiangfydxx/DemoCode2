@@ -1,0 +1,26 @@
+/** @format */
+
+@keyframes marqueeAnim {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.marquee-content {
+  white-space: nowrap;
+  display: inline-block;
+  color: #000;
+  animation: marqueeAnim 30s linear 0s infinite;
+}
+
+.marquee-root {
+  width: 300px;
+  height: 30px;
+  text-align: left;
+  line-height: 30px;
+  overflow: hidden;
+  background-color: burlywood;
+}

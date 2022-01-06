@@ -49,6 +49,7 @@ import Sort from '../pages/sort';
 import PointerEvent from '../pages/css';
 import TestRadio from '../pages/MultiRadio';
 import Loop from '../pages/loop';
+import MyQueue from '../pages/carousel';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -146,6 +147,7 @@ class BasicLayout extends React.Component {
               <Route path="/pointer" exact component={PointerEvent} />
               <Route path="/testRadio" exact component={TestRadio} />
               <Route path="/loop" exact component={Loop} />
+              <Route path="/queue" exact component={MyQueue} />
               <Redirect to="/" />
             </Switch>
           </Content>

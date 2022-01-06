@@ -1,11 +1,13 @@
 /** @format */
 
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { Button } from 'antd';
 const ThemeContext = React.createContext('dark');
 const CounterContext = React.createContext(0);
 const DateContext = React.createContext(0);
 
 function ThemeButton() {
+  console.log('主题重新渲染');
   return (
     <ThemeContext.Consumer>
       {(value) => <div>需要显示的主题色为：{value}</div>}
@@ -13,25 +15,40 @@ function ThemeButton() {
   );
 }
 
+function CounterChild({ text }: { text: string }) {
+  console.log('CounterChild重新渲染');
+  return <div>counter的文本信息为{text}</div>;
+}
+
 function CounterBtn() {
   const counter = useContext(CounterContext);
   const dater = useContext(DateContext);
+  const [text, setText] = useState('');
+  console.log('counter重新渲染');
+
+  const handleClick = () => {
+    setText(text === '测试' ? '小明' : '测试');
+  };
   return (
     <div>
       counter的值为：{counter}
       <span>初始化的时间戳为： {dater}</span>
+      <CounterChild text={text} />
+      <Button onClick={handleClick}>测试1</Button>
     </div>
   );
 }
 
 class TestDate extends React.Component<any, any> {
   render() {
+    console.log('date重新渲染');
     return <div>此时的时间戳的值为：{this.context}</div>;
   }
 }
 TestDate.contextType = DateContext;
 
 function MyName({ name }: { name: string }) {
+  console.log('myName 重新渲染');
   return <div>the name is {name}</div>;
 }
 
@@ -80,7 +97,7 @@ class TextContext extends React.Component<any, any> {
       <ThemeContext.Provider value={theme}>
         <CounterContext.Provider value={count}>
           <DateContext.Provider value={date}>
-            <div className="container">
+            <div className="container1">
               <TestDate />
               <ThemeButton />
               <CounterBtn />
