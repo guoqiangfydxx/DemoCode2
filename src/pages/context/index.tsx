@@ -2,6 +2,7 @@
 
 import React, { useContext, useState } from 'react';
 import { Button } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 const ThemeContext = React.createContext('dark');
 const CounterContext = React.createContext(0);
 const DateContext = React.createContext(0);
@@ -119,6 +120,7 @@ class TextContext extends React.Component<any, any> {
           </DateContext.Provider>
         </CounterContext.Provider>
         <div>date: {date}</div>
+        <LoadingOutlined />
       </ThemeContext.Provider>
     );
   }

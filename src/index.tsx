@@ -10,7 +10,7 @@ import App from './layout';
 import reportWebVitals from './reportWebVitals';
 import { ConfirmProdiver, defaultGetPrefix } from './util';
 import Context from './pages/context';
-import './index.less';
+// import './index.less';
 
 ReactDOM.render(
   // <BrowserRouter>
