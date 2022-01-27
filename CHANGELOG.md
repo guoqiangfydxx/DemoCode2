@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/guoqiangfydxx/DemoCode2/compare/v1.3.0...v1.3.2) (2022-01-27)
+
+
+### Features
+
+* 使用修订号来更新 ([77882d5](https://github.com/guoqiangfydxx/DemoCode2/commit/77882d526594c26755760dc510ab718ed13e7396))
+
 ## [1.3.0](https://github.com/guoqiangfydxx/DemoCode2/compare/v0.1.4...v1.3.0) (2022-01-27)
 
 
