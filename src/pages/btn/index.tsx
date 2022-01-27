@@ -16,7 +16,11 @@ import {
   Table,
   InputNumber
 } from 'antd';
+import copy from 'copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import TestButton from './btn2';
+import Loading from './LoadingOutLine';
+import Plus from './PlusOutLine';
 import styles from './index.module.scss';
 
 const { Column } = Table;
@@ -153,6 +157,11 @@ function TestBtn() {
           <InputNumber />
         </Input.Group>
       </div>
+      <span className={styles.test}>
+        <Loading />
+      </span>
+
+      <Plus />
     </>
   );
 }

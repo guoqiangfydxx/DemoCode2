@@ -137,6 +137,9 @@ class SiderMenu extends PureComponent {
             <Menu.Item key="39">
               <Link to="/radio">radio</Link>
             </Menu.Item>
+            <Menu.Item key="60">
+              <Link to="/datePicker">DatePicker</Link>
+            </Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub5"

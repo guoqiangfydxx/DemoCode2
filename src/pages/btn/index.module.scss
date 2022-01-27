@@ -27,3 +27,20 @@
 .star {
   border: 1px solid Red;
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.test {
+  // border: 1px solid #ddd;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
