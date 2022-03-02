@@ -16,8 +16,9 @@ import {
   Table,
   InputNumber
 } from 'antd';
-import copy from 'copy-to-clipboard';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+// import copy from 'copy-to-clipboard';
+// import { CopyToClipboard } from 'react-copy-to-clipboard';
+import ClipboardJS from 'clipboard';
 import TestButton from './btn2';
 import Loading from './LoadingOutLine';
 import Plus from './PlusOutLine';
@@ -53,6 +54,10 @@ function TestBtn() {
   function handleSubmit(values: any) {
     console.log('value>>>>', values);
   }
+
+  useEffect(() => {
+    new ClipboardJS('.yuu4u4');
+  }, []);
 
   return (
     <>
@@ -162,6 +167,9 @@ function TestBtn() {
       </span>
 
       <Plus />
+      <div className="yuu4u4" data-clipboard-text="微信号ffdfdfewdfsdsf复制">
+        复制
+      </div>
     </>
   );
 }

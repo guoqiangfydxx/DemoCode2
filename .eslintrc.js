@@ -51,7 +51,8 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-param-reassign': 'off',
     'no-multi-assign': 'off',
-    'consistent-return': 'off'
+    'consistent-return': 'off',
+    'no-new': 'off'
   },
   settings: {
     webpack: {
