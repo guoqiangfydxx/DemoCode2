@@ -464,6 +464,18 @@ class SiderMenu extends PureComponent {
               <Link to="/queue">loop</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub49"
+            title={
+              <span>
+                <span>图片</span>
+              </span>
+            }
+          >
+            <Menu.Item key="49">
+              <Link to="/image">Image</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

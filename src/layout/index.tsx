@@ -51,6 +51,7 @@ import TestRadio from '../pages/MultiRadio';
 import Loop from '../pages/loop';
 import MyQueue from '../pages/carousel';
 import DatePicker from '../pages/Form/datepicker';
+import Container from '../pages/image/container';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -150,6 +151,7 @@ class BasicLayout extends React.Component {
               <Route path="/loop" exact component={Loop} />
               <Route path="/queue" exact component={MyQueue} />
               <Route path="/datePicker" exact component={DatePicker} />
+              <Route path="/image" exact component={Container} />
               <Redirect to="/" />
             </Switch>
           </Content>
