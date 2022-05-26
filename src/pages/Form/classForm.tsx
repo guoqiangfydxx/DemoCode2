@@ -5,6 +5,7 @@ import { Form, Input, Button, Select } from 'antd';
 import { FormInstance } from 'antd/lib/form';
 // antd4的form在class组件中不再挂载到this.props上面了，目前的方法都是直接通过ref来获取对应的表单实例
 const { Option } = Select;
+const { TextArea } = Input;
 
 const layout = {
   labelCol: { span: 8 },
@@ -76,6 +77,9 @@ class Demo extends React.Component {
         <Form.Item name="note" label="Note" rules={[{ required: true }]}>
           <Input />
         </Form.Item>
+        <Form.Item name="tip" label="Tip" rules={[{ required: true }]}>
+          <TextArea />
+        </Form.Item>
         <Form.Item name="gender" label="Gender" rules={[{ required: true }]}>
           <Select
             placeholder="Select a option and change input text above"
@@ -87,14 +91,14 @@ class Demo extends React.Component {
             <Option value="other">other</Option>
           </Select>
         </Form.Item>
-        <Form.Item
+        {/* <Form.Item
           noStyle
           shouldUpdate={(prevValues, currentValues) =>
             prevValues.gender !== currentValues.gender
           }
         >
           {({ getFieldValue }) =>
-            (getFieldValue('gender') === 'other' ? (
+            getFieldValue('gender') === 'other' ? (
               <Form.Item
                 name="customizeGender"
                 label="Customize Gender"
@@ -102,9 +106,9 @@ class Demo extends React.Component {
               >
                 <Input />
               </Form.Item>
-            ) : null)
+            ) : null
           }
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Submit

@@ -476,6 +476,18 @@ class SiderMenu extends PureComponent {
               <Link to="/image">Image</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub50"
+            title={
+              <span>
+                <span>虚拟列表</span>
+              </span>
+            }
+          >
+            <Menu.Item key="50">
+              <Link to="/table">虚拟表格</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

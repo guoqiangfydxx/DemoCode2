@@ -52,7 +52,8 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-multi-assign': 'off',
     'consistent-return': 'off',
-    'no-new': 'off'
+    'no-new': 'off',
+    'react/prop-types': 'off'
   },
   settings: {
     webpack: {
