@@ -43,6 +43,17 @@ const Demo = () => {
         <WrapperInput />
       </Field>
       <Field
+        name="phone"
+        rules={[
+          { required: true, message: '电话不能为空' },
+          {
+            transform: (value) => value.replace(/5/g, '*')
+          }
+        ]}
+      >
+        <Input />
+      </Field>
+      <Field
         name="password"
         rules={[{ required: true, message: '密码不能为空' }]}
       >

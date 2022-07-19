@@ -53,7 +53,8 @@ module.exports = {
     'no-multi-assign': 'off',
     'consistent-return': 'off',
     'no-new': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    'no-confusing-arrow': 'off'
   },
   settings: {
     webpack: {
