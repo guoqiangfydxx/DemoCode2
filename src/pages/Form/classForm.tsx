@@ -74,7 +74,28 @@ class Demo extends React.Component {
         name="control-ref"
         onFinish={this.onFinish}
       >
-        <Form.Item name="note" label="Note" rules={[{ required: true }]}>
+        <Form.Item
+          name="note"
+          label="Note"
+          rules={[
+            { required: true },
+            {
+              validator: () => Promise.resolve()
+            },
+            {
+              validator: (_, value) => {
+                console.log('kfkf');
+                if (value?.length > 3) {
+                  return Promise.resolve();
+                }
+                // eslint-disable-next-line prefer-promise-reject-errors
+                return Promise.reject('长度异常');
+              },
+              validateTrigger: 'onBlur'
+            }
+          ]}
+          validateTrigger={['onChange', 'onBlur']}
+        >
           <Input />
         </Form.Item>
         <Form.Item name="tip" label="Tip" rules={[{ required: true }]}>
