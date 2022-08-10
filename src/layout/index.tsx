@@ -65,10 +65,26 @@ class BasicLayout extends React.Component {
         'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png'
     },
     collapsed: false,
-    isMobile: false
+    isMobile: false,
+    targetIcons: null,
+    icon1: null,
+    icon2: null,
+    icon3: null
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    import('@ant-design/icons')
+      .then((res) => {
+        console.log('res', res);
+        this.setState({
+          targetIcons: res.AppleOutlined,
+          icon1: res.WindowsOutlined,
+          icon2: res.IeOutlined,
+          icon3: res.ChromeOutlined
+        });
+      })
+      .catch((err) => console.error(err));
+  }
 
   handleMenuCollapse = (collapsed: any) => {
     this.setState({
@@ -79,7 +95,15 @@ class BasicLayout extends React.Component {
   handleMenuClick = () => {};
 
   render() {
-    const { currentUser, isMobile: mb, collapsed } = this.state;
+    const {
+      currentUser,
+      isMobile: mb,
+      collapsed,
+      targetIcons,
+      icon1,
+      icon2,
+      icon3
+    } = this.state;
 
     const layout = (
       <Layout id="components-layout-demo-customr" className="project-container">
@@ -163,6 +187,10 @@ class BasicLayout extends React.Component {
                 <>
                   Copyright
                   <CopyrightOutlined />
+                  {(targetIcons as any)?.render()}
+                  {(icon1 as any)?.render()}
+                  {(icon2 as any)?.render()}
+                  {(icon3 as any)?.render()}
                 </>
               }
             />
