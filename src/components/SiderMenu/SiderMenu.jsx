@@ -488,6 +488,18 @@ class SiderMenu extends PureComponent {
               <Link to="/table">虚拟表格</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub51"
+            title={
+              <span>
+                <span>editor</span>
+              </span>
+            }
+          >
+            <Menu.Item key="51">
+              <Link to="/editor">editor</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );

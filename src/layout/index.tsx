@@ -53,6 +53,7 @@ import MyQueue from '../pages/carousel';
 import DatePicker from '../pages/Form/datepicker';
 import Container from '../pages/image/container';
 import VirtualTable from '../pages/table';
+import Editor from '../pages/editor';
 import './index.scss';
 
 const { Header, Content, Footer } = Layout;
@@ -178,6 +179,7 @@ class BasicLayout extends React.Component {
               <Route path="/datePicker" exact component={DatePicker} />
               <Route path="/image" exact component={Container} />
               <Route path="/table" exact component={VirtualTable} />
+              <Route path="/editor" exact component={Editor} />
               <Redirect to="/" />
             </Switch>
           </Content>
