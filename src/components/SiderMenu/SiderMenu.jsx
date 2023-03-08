@@ -512,6 +512,18 @@ class SiderMenu extends PureComponent {
               <Link to="/react">react-demo</Link>
             </Menu.Item>
           </SubMenu>
+          <SubMenu
+            key="sub53"
+            title={
+              <span>
+                <span>CSS</span>
+              </span>
+            }
+          >
+            <Menu.Item key="53">
+              <Link to="/animation">animation</Link>
+            </Menu.Item>
+          </SubMenu>
         </Menu>
       </Sider>
     );
